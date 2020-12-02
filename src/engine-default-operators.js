@@ -18,5 +18,12 @@ Operators.push(new Operator('lessThan', (a, b) => a < b, numberValidator))
 Operators.push(new Operator('lessThanInclusive', (a, b) => a <= b, numberValidator))
 Operators.push(new Operator('greaterThan', (a, b) => a > b, numberValidator))
 Operators.push(new Operator('greaterThanInclusive', (a, b) => a >= b, numberValidator))
+Operators.push(new Operator('required', (a, b) => b.length > 0))
+Operators.push(new Operator('min', (a, b) => b > a))
+Operators.push(new Operator('max', (a, b) => b < a))
+Operators.push(new Operator('accept', (a, b) => {
+  const ext = b.split('.').pop();
+  return a.includes(ext);
+}))
 
 export default Operators
