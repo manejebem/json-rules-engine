@@ -2,7 +2,7 @@
   "name": "json-rules-engine",
   "version": "5.2.0",
   "description": "Rules Engine expressed in simple json",
-  "main": "dist/index.js",
+  "main": "src/index.js",
   "types": "types/index.d.ts",
   "scripts": {
     "test": "mocha && npm run lint --silent && npm run test:types",
@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/cachecontrol/json-rules-engine"
+    "url": "https://github.com/manejebem/json-rules-engine"
   },
   "keywords": [
     "rules",
@@ -39,17 +39,6 @@
       "beforeEach",
       "expect",
       "factories"
-    ]
-  },
-  "mocha": {
-    "require": [
-      "babel-core/register",
-      "babel-polyfill"
-    ],
-    "file": "./test/support/bootstrap.js",
-    "checkLeaks": true,
-    "globals": [
-      "expect"
     ]
   },
   "author": "Cache Hamm <cache.hamm@gmail.com>",
